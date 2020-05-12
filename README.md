@@ -11,4 +11,4 @@
  - Metin Emiroglu <metin.emiroglu@gelecekvarlik.com.tr>
 
 ## Running doctests
-    `python -m doctest -v file_to_test.py`
+`python -m doctest -v file_to_test.py`
