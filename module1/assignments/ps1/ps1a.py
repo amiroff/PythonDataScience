@@ -4,7 +4,6 @@ Part A: House Hunting
 Write a program to calculate how many months it will take you to save up enough money for a down
 payment. You will want your main variables to be floats, so you should cast user inputs to floats.
 """
-from typing import Tuple
 
 # constants
 PORTION_DOWN_PAYMENT = 0.25
@@ -13,7 +12,7 @@ R = 0.04
 
 def calculate_months(annual_salary: float,
                      portion_saved: float,
-                     total_cost: float) -> Tuple[int, float]:
+                     total_cost: float) -> int:
     """Calculates months need to to save downpayment
 
     Arguments:
@@ -22,12 +21,12 @@ def calculate_months(annual_salary: float,
         total_cost {float} -- Total cost of a house
 
     Returns:
-        Tuple[int, float] -- month and downpayment information
+        int -- Months needed for downpayment
 
     >>> calculate_months(120000, 0.1, 1000000)
-    (183, 250000.0)
+    183
     >>> calculate_months(80000, 0.15, 500000)
-    (105, 125000.0)
+    105
 
     """
 
@@ -45,7 +44,7 @@ def calculate_months(annual_salary: float,
         current_savings += portion_saved * monthly_salary
         needed_months += 1
 
-    return needed_months, needed_down_payment
+    return needed_months
 
 
 if __name__ == '__main__':
@@ -54,7 +53,5 @@ if __name__ == '__main__':
     saved = float(input("Your portion of salary to be saved: "))
     cost = float(input("The cost of your dream home: "))
 
-    (months, down_payment) = calculate_months(salary,
-                                              saved,
-                                              cost)
-    print(f"You will need {months} months to save for {down_payment} downpayment")
+    months = calculate_months(salary, saved, cost)
+    print(f"You will need {months} months to save for downpayment")
