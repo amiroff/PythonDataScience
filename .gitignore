@@ -1,6 +1,6 @@
 .venv
 .vscode/settings.json
 __pycache__/
-.ipynb_checkopoints/
 .idea
 .vscode
+**/.ipynb_checkpoints/**
