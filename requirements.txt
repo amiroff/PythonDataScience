@@ -6,3 +6,5 @@ rope
 scipy
 imageio
 scikit-image
+pylint
+autopep8
