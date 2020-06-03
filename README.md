@@ -8,7 +8,7 @@
 - Install packages `pip install -r requirements.txt`
 
 ## Authors
- - Metin Emiroglu <metin.emiroglu@gelecekvarlik.com.tr>
+ - Metin Emiroglu <amiroff@gmail.com>
 
 ## Running doctests
 `python -m doctest -v file_to_test.py`
